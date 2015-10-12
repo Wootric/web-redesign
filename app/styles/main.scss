@@ -1,0 +1,567 @@
+$icon-font-path: '../fonts/';
+
+// bower:scss
+@import "bower_components/bootstrap-sass/assets/stylesheets/_bootstrap.scss";
+@import "bower_components/font-awesome/scss/font-awesome.scss";
+// endbower
+
+body {
+    padding-top: 50px;
+    color: #595959;
+  }
+// Bootstrap Overrides
+.container-fluid {
+    max-width: 1140px;
+  }
+.container-narrow > hr {
+    margin: 30px 0;
+  }
+
+.btn {
+     text-transform: uppercase;
+      &.btn-success{
+        box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+        transition: all 0.5s ease 0s;
+        &:hover {
+          box-shadow: 0 8px 8px 0 rgba(0, 0, 0, 0.16), 0 2px 5px 0 rgba(0, 0, 0, 0.12);
+          transition: all 0.5s ease 0s;
+        }
+      }
+      &.btn-danger{
+        box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+        transition: all 0.5s ease 0s;
+        &:hover {
+          box-shadow: 0 8px 8px 0 rgba(0, 0, 0, 0.16), 0 2px 5px 0 rgba(0, 0, 0, 0.12);
+          transition: all 0.5s ease 0s;
+        }
+      }
+    }
+
+.navbar {
+    box-shadow:0px 1px 1px #ddd;
+    button.btn {
+       margin:15px 5px 0 0;
+      }
+    @media (max-width: $grid-float-breakpoint) {
+      button.btn {
+         margin:0 5px 0 10px;
+        }
+      }
+  }
+
+.navbar-brand {
+    padding: 10px $navbar-padding-horizontal;
+    > img {
+      width: 140px;
+    }
+  }
+
+.navbar-toggle {
+    border: none;
+    background: transparent;
+    .icon-bar {
+      &:nth-of-type(2) {
+        top: 1px;
+      }
+      &:nth-of-type(3) {
+        top: 2px;
+      }
+      position: relative;
+      transition: all 200ms ease-in-out;
+    }
+    &.active .icon-bar {
+      &:nth-of-type(1) {
+        top: 6px;
+        transform: rotate(45deg);
+      }
+      &:nth-of-type(2) {
+        background-color: transparent;
+      }
+      &:nth-of-type(3) {
+        top: -6px;
+        transform: rotate(-45deg);
+      }
+    }
+  }
+
+.navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus {
+    background-color: transparent;
+}
+
+.navbar-btn {
+   margin:15px 5px 0 0;
+   text-transform: uppercase;
+  &.btn-success{
+    background-color: #7ea436;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+    transition: all 0.5s ease 0s;
+    &:hover {
+      background-color: #6e902f;
+      box-shadow: 0 8px 8px 0 rgba(0, 0, 0, 0.16), 0 2px 5px 0 rgba(0, 0, 0, 0.12);
+      transition: all 0.5s ease 0s;
+      }
+    }
+    &.btn-danger{
+      box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+      transition: all 0.5s ease 0s;
+      &:hover {
+        box-shadow: 0 8px 8px 0 rgba(0, 0, 0, 0.16), 0 2px 5px 0 rgba(0, 0, 0, 0.12);
+        transition: all 0.5s ease 0s;
+      }
+    }
+  }
+
+  .navbar-nav {
+    > li > a {
+      font-size: 16px;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      line-height: 47px;
+    }
+  }
+  /* Wootric Top */
+.wootric-top {
+  background: #ffffff url(../images/watermark.png) center no-repeat;
+  background-size: cover;
+  color: #595959;
+  padding: 4em 0;
+  overflow: auto;
+  p {
+    color: #595959;
+  }
+  a.button {
+    padding: 0.7em 2em;
+    font-size: 1.4em;
+    display: inline-block;
+    text-transform: uppercase;
+    width: auto;
+    border-radius: 4px;
+    margin-top: 1em;
+    font-weight: 600;
+    cursor: pointer;
+    background-color: #7ea436;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+    color: #fff;
+    transition: all 0.5s ease 0s;
+    &:hover {
+      background-color: #6e902f;
+      box-shadow: 0 8px 8px 0 rgba(0, 0, 0, 0.16), 0 2px 5px 0 rgba(0, 0, 0, 0.12);
+      color: #fff;
+      transition: all 0.5s ease 0s;
+    }
+  }
+}
+  /* Wootric Top Blue Alt */
+.wootric-top-blue {
+  background: #2d91d7 url(../images/watermark.png) center no-repeat;
+  background-size: cover;
+  color: #ffffff;
+  padding: 4em 0;
+  overflow: auto;
+  p {
+    color: #ffffff;
+  }
+  a.button {
+    padding: 0.7em 2em;
+    font-size: 1.4em;
+    display: inline-block;
+    text-transform: uppercase;
+    width: auto;
+    border-radius: 4px;
+    margin-top: 1em;
+    font-weight: 600;
+    cursor: pointer;
+    background-color: #82bed2;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+    color: #fff;
+    transition: all 0.5s ease 0s;
+    &:hover {
+      background-color: #76aec0;
+      box-shadow: 0 8px 8px 0 rgba(0, 0, 0, 0.16), 0 2px 5px 0 rgba(0, 0, 0, 0.12);
+      color: #fff;
+      transition: all 0.5s ease 0s;
+    }
+  }
+}
+  /* Wootric Customer Logos */
+.wootric-logos {
+  background-color: #ffffff;
+  padding: 1em 1em 0.3em 1em;
+  color: #888888;
+  text-transform: uppercase;
+  border-top: 1px solid $navbar-default-border;
+  border-bottom: 1px solid $navbar-default-border;
+  border-color: $navbar-default-border;
+  p {
+    color: #888888;
+    font-size: 0.9em;
+    font-weight: 600;
+  }
+  img {
+    margin: 0 0 0 3em;
+    height: 40px;
+    opacity: 0.9;
+    &:hover {
+      opacity: 1;
+    }
+    &.first{
+      margin: 0 0 0 1em;
+    }
+  }
+}
+  /* Wootric Features Blue Bg */
+.wootric-features {
+  background: #2d91d7;
+  color: #fff;
+  padding: 4em 0;
+  overflow: auto;
+  p {
+    color: #fff;
+  }
+}
+ /* Wootric white Bg */
+.wootric-hero {
+  padding-top: 2em;
+}
+  /* Wootric Benefits */
+.wootric-benefits {
+  margin-top: 4em;
+  margin-left: auto;
+  margin-right: auto;
+  ul {
+    list-style: none;
+    width: 100%;
+    position: -webkit-sticky;
+    position: -moz-sticky;
+    position: -ms-sticky;
+    position: -o-sticky;
+    position: sticky;
+    top: 10px;
+    z-index: 100;
+    li {
+      display: inline;
+      width: 25%;
+    }
+  }
+}
+  /* Wootric Experience tab Section */
+.wootric-experience {
+  margin-top: 4em;
+  margin-left: auto;
+  margin-right: auto;
+  .nav-tabs {
+    border-top: 1px solid #ddd;
+    border-bottom: none;
+    > li {
+      &.active {
+        font-weight: 600;
+        > a {
+          border-width: 0;
+          &:focus, &:hover {
+            border-width: 0;
+            font-weight: 600;
+          }
+        }
+        > a {
+          border: none;
+          color: #2d91d7 !important;
+          background: transparent;
+        }
+        > a::after {
+          transform: scale(1);
+        }
+      }
+      > a {
+        border: none;
+        color: #666;
+      }
+      > a {
+        text-align: center;
+        &:hover {
+          border: none;
+          color: #2d91d7 !important;
+          background: transparent;
+          font-weight: 600;
+        }
+        &::after {
+          content: "";
+          background: #2d91d7;
+          height: 2px;
+          position: absolute;
+          width: 100%;
+          left: 0px;
+          top: -1px;
+          transition: all 250ms ease 0s;
+          transform: scale(0);
+        }
+      }
+      &:hover > a::after {
+        transform: scale(1);
+      }
+    }
+  }
+  .tab-nav > li > a::after {
+    background: #21527d none repeat scroll 0% 0%;
+    color: #fff;
+  }
+
+  .tab-pane {
+    padding: 15px 0;
+    .btn {
+      width: 200px;
+    }
+    img.lefty {
+      box-shadow: 5px 5px 5px 0px rgba(136,136,136,1);
+    }
+    img.righty {
+      box-shadow: -5px 5px 5px 0px rgba(136,136,136,1);
+    }
+    @media screen and (max-width: 768px) {
+      img.lefty {
+        box-shadow: -5px 5px 5px 0px rgba(136,136,136,1);
+      }
+      img.righty {
+        box-shadow: -5px 5px 5px 0px rgba(136,136,136,1);
+      }
+    }
+  }
+
+  .tab-content {
+    padding: 40px 10px 20px;
+  }
+  ul.nav {
+    list-style: none;
+    width: 100%;
+    position: -webkit-sticky;
+    position: -moz-sticky;
+    position: -ms-sticky;
+    position: -o-sticky;
+    position: sticky;
+    top: 10px;
+    z-index: 100;
+    li {
+      display: inline;
+      width: 25%;
+    }
+  }
+  h2 {margin-bottom: 2em;}
+  p {
+    margin-bottom: 1em;
+  }
+}
+
+  /* Wootric Testimonials */
+.wootric-testimonials {
+  background-color: #f5f5f5;
+  border-radius: 0;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+  padding: 10px 25px;
+  display: block;
+  margin-top: 60px;
+  .wootric-testimonials-icon {
+    background-color: #be195b;
+    border-radius: 50%;
+    border: 10px solid white;
+    display: table;
+    height: 100px;
+    margin: 0 auto;
+    width: 100px;
+    margin-top: -61px;
+    span {
+      color: #fff;
+      display: table-cell;
+      text-align: center;
+      vertical-align: middle;
+    }
+  }
+
+  .wootric-info {
+    h2 {
+      margin-bottom: 2em;
+    }
+    > {
+      p {
+        color: #717171;
+        font-size: 16px;
+        padding-top: 10px;
+        text-align: justify;
+      }
+    }
+    img {
+      width:100px;
+    }
+  }
+  .testimonial {
+    width: 100%;
+    p {
+      margin: 3em 0;
+      width: 80%;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+  .testimonial-image-profile {
+    margin: -15px 10px 0px 50px;
+    z-index: 9;
+    width: 20%;
+  }
+}
+  /* Wootric Steps */
+.wootric-steps {
+  background: #2d91d7 url(../images/watermark.png) center no-repeat;
+  background-size: cover;
+  color: #fff;
+  padding: 3em 0;
+  overflow: auto;
+  p {
+    color: #fff;
+    margin-bottom: 20px;
+  }
+  a.button {
+    padding: 0.7em 2em;
+    font-size: 1.4em;
+    display: inline-block;
+    text-transform: uppercase;
+    width: auto;
+    border-radius: 4px;
+    margin-top: -15px;
+    font-weight: 600;
+    cursor: pointer;
+    background-color: #82bed2;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+    color: #fff;
+    transition: all 0.5s ease 0s;
+    &:hover {
+      background-color: #76aec0;
+      box-shadow: 0 8px 8px 0 rgba(0, 0, 0, 0.16), 0 2px 5px 0 rgba(0, 0, 0, 0.12);
+      color: #fff;
+      transition: all 0.5s ease 0s;
+    }
+  }
+  ul.step {
+    list-style: none;
+    top: 30px;
+    li {
+      display: inline;
+      padding: 0 10px;
+      width: 25%;
+    }
+  }
+  .step-num {
+      font-size: 1.3em;
+    }
+    @media (max-width: $grid-float-breakpoint) {
+      .step-num {
+          font-size: 1.5em;
+          margin-bottom: 35px;
+        }
+    }
+}
+/* Wootric footer */
+
+.wootric-footer {
+  background-color: #595959;
+  padding: 2em;
+  text-align: left;
+  font-size: 0.95em;
+  ul {
+    list-style: none;
+    color: #ddd;
+    margin: 0;
+    padding: 0;
+  }
+  li {
+    margin: 1em 0;
+  }
+
+  p {
+    color: #ccc;
+  }
+  a {
+    color: #aaa;
+    cursor: pointer;
+    &:hover {
+      color: #eee;
+      text-decoration: none;
+    }
+  }
+  /*Change icons size here*/
+
+  .social-icons {
+    .fa {
+      font-size: 1.8em;
+      width: 40px;
+      height: 40px;
+      line-height: 40px;
+      text-align: center;
+      color: #595959;
+      color: rgba(89, 89, 89, 0.8);
+      -webkit-transition: all 0.3s ease-in-out;
+      -moz-transition: all 0.3s ease-in-out;
+      -ms-transition: all 0.3s ease-in-out;
+      -o-transition: all 0.3s ease-in-out;
+      transition: all 0.3s ease-in-out;
+    }
+    &.icon-circle .fa {
+      border-radius: 50%;
+    }
+    &.icon-rounded .fa {
+      border-radius: 5px;
+    }
+    &.icon-flat .fa {
+      border-radius: 0;
+    }
+    .fa {
+      &:hover, &:active {
+        color: #595959;
+        -webkit-box-shadow: 1px 1px 3px #333;
+        -moz-box-shadow: 1px 1px 3px #333;
+        box-shadow: 1px 1px 3px #333;
+      }
+    }
+    &.icon-zoom .fa {
+      &:hover, &:active {
+        -webkit-transform: scale(1.1);
+        -moz-transform: scale(1.1);
+        -ms-transform: scale(1.1);
+        -o-transform: scale(1.1);
+        transform: scale(1.1);
+      }
+    }
+    &.icon-rotate .fa {
+      &:hover, &:active {
+        -webkit-transform: scale(1.1) rotate(360deg);
+        -moz-transform: scale(1.1) rotate(360deg);
+        -ms-transform: scale(1.1) rotate(360deg);
+        -o-transform: scale(1.1) rotate(360deg);
+        transform: scale(1.1) rotate(360deg);
+      }
+    }
+    .fa-facebook, .fa-facebook-square, .fa-google-plus, .fa-google-plus-square, .fa-linkedin, .fa-linkedin-square, .fa-twitter, .fa-twitter-square, .fa-youtube, .fa-youtube-play, .fa-youtube-square {
+      background-color: #aaaaaa;
+    }
+    /* Responsive: Portrait tablets and up */
+    @media screen and (max-width: 480px) {
+      .fa {
+        font-size: 1.8em;
+        width: 35px;
+        height: 35px;
+        line-height: 35px;
+        text-align: center;
+        color: #595959;
+        color: rgba(89, 89, 89, 0.8);
+        -webkit-transition: all 0.3s ease-in-out;
+        -moz-transition: all 0.3s ease-in-out;
+        -ms-transition: all 0.3s ease-in-out;
+        -o-transition: all 0.3s ease-in-out;
+        transition: all 0.3s ease-in-out;
+      }
+    }
+  }
+
+  .legal {
+    margin-top: 4em;
+    font-size: 80%;
+    text-align: center;
+  }
+}
