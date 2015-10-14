@@ -1,6 +1,8 @@
 $icon-font-path: '../fonts/';
-// Add Google Lato Font
+
+// Lato font-family
 @import url(https://fonts.googleapis.com/css?family=Lato:400,700,900,700italic,400italic,900italic);
+
 // Bootstrap Style Overrides
 @import "_custom.scss";
 
@@ -17,7 +19,8 @@ body {
     font-family: $lato-font;
     font-weight: normal;
   }
-// Wootric containers
+
+// Adjust Fluid Containers
 // --------------------------------------------------
 .container-fluid {
     max-width: 1140px;
@@ -26,25 +29,16 @@ body {
     margin: 30px 0;
   }
 .lg-text {font-size: 20px;}
+
 // Wootric buttons
 // --------------------------------------------------
 .btn {
-     text-transform: uppercase;
-      &.btn-success{
-        box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+    text-transform: uppercase;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+    transition: all 0.5s ease 0s;
+      &:hover {
+        box-shadow: 0 8px 8px 0 rgba(0, 0, 0, 0.16), 0 4px 5px 0 rgba(0, 0, 0, 0.12);
         transition: all 0.5s ease 0s;
-        &:hover {
-          box-shadow: 0 8px 8px 0 rgba(0, 0, 0, 0.16), 0 4px 5px 0 rgba(0, 0, 0, 0.12);
-          transition: all 0.5s ease 0s;
-        }
-      }
-      &.btn-danger{
-        box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
-        transition: all 0.5s ease 0s;
-        &:hover {
-          box-shadow: 0 8px 8px 0 rgba(0, 0, 0, 0.16), 0 4px 5px 0 rgba(0, 0, 0, 0.12);
-          transition: all 0.5s ease 0s;
-        }
       }
     }
 // Wootric navbar
@@ -52,9 +46,14 @@ body {
 .navbar {
     box-shadow:0px 1px 1px #ddd;
     button.btn {
-       margin:15px 5px 0 0;
+       margin:15px 15px 0 0;
       }
-    @media (max-width: $grid-float-breakpoint) {
+    .mologin{
+      position: absolute;
+      right: 65px;
+      top: 14px;
+    }
+    @media screen and (max-width: 767px) {
       button.btn {
          margin:0 5px 0 10px;
         }
@@ -72,11 +71,16 @@ body {
     border: none;
     background: transparent;
     .icon-bar {
+      &:nth-of-type(1) {
+      background-color: #2d91d7;
+      }
       &:nth-of-type(2) {
         top: 1px;
+        background-color: #2d91d7;
       }
       &:nth-of-type(3) {
         top: 2px;
+        background-color: #2d91d7;
       }
       position: relative;
       transition: all 200ms ease-in-out;
@@ -85,6 +89,7 @@ body {
       &:nth-of-type(1) {
         top: 6px;
         transform: rotate(45deg);
+        background-color: #be195b;
       }
       &:nth-of-type(2) {
         background-color: transparent;
@@ -92,6 +97,7 @@ body {
       &:nth-of-type(3) {
         top: -6px;
         transform: rotate(-45deg);
+        background-color:#be195b;
       }
     }
   }
@@ -103,24 +109,6 @@ body {
 .navbar-btn {
    margin:15px 5px 0 0;
    text-transform: uppercase;
-  &.btn-success{
-    background-color: #7ea436;
-    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
-    transition: all 0.5s ease 0s;
-    &:hover {
-      background-color: #6e902f;
-      box-shadow: 0 8px 8px 0 rgba(0, 0, 0, 0.16), 0 2px 5px 0 rgba(0, 0, 0, 0.12);
-      transition: all 0.5s ease 0s;
-      }
-    }
-    &.btn-danger{
-      box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
-      transition: all 0.5s ease 0s;
-      &:hover {
-        box-shadow: 0 8px 8px 0 rgba(0, 0, 0, 0.16), 0 2px 5px 0 rgba(0, 0, 0, 0.12);
-        transition: all 0.5s ease 0s;
-      }
-    }
   }
 
   .navbar-nav {
@@ -129,6 +117,11 @@ body {
       padding-top: 10px;
       padding-bottom: 10px;
       line-height: 47px;
+    }
+    @media screen and (max-width: 767px) {
+      > li {
+        text-align: center;
+      }
     }
   }
 
@@ -140,19 +133,28 @@ body {
   color: #595959;
   padding: 6em 0;
   overflow: auto;
-  h2{
+  h1{
     font-weight: 400;
-    font-size: 25px;
+  }
+  h2{
+    font-size: 20px;
   }
   p {
     color: #595959;
     width: 80%;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 0 auto;
+    font-size: 18px;
   }
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 480px) {
+    h1 {
+      font-size: 30px;
+    }
+    h2{
+      font-size: 18px;
+    }
     p {
       width: 100%;
+      font-size: 16px;
     }
   }
   a.button {
@@ -180,25 +182,40 @@ body {
 .blue {
   background: #2d91d7 url(../images/watermark.png) center no-repeat;
   background-size:cover;
-  color: #fff;
+  color: #ffffff;
+  h1{
+    font-weight: 400;
+  }
   p {
-    color: #fff;
+    color: #ffffff;
+    width: 80%;
+    margin: 0 auto;
+    font-size: 18px;
+  }
+  @media screen and (max-width: 480px) {
+    h1 {
+      font-size: 30px;
+    }
+    p {
+      width: 100%;
+      font-size: 14px;
+    }
   }
 }
 .sky-blue {
   background: #82bed2 url(../images/watermark.png) center no-repeat;
   background-size:cover;
-  color: #fff;
+  color: #ffffff;
   p {
-    color: #fff;
+    color: #ffffff;
   }
 }
 .ruby {
   background: #be195b url(../images/watermark_white.png) center no-repeat;
   background-size:cover;
-  color: #fff;
+  color: #ffffff;
   p {
-    color: #fff;
+    color: #ffffff;
   }
 }
 // Wootric Customer Logos Section
@@ -278,6 +295,10 @@ body {
   margin-top: 4em;
   margin-left: auto;
   margin-right: auto;
+  h2 {margin-bottom: 2em;}
+  p {
+    margin-bottom: 1em;
+  }
   .nav-tabs {
     border-top: 1px solid #ddd;
     border-bottom: none;
@@ -358,6 +379,11 @@ body {
   .tab-content {
     padding: 40px 10px 20px;
   }
+  @media screen and (max-width: 480px) {
+    .tab-content {
+      padding: 4px 10px 20px;
+    }
+  }
   ul.nav {
     list-style: none;
     width: 100%;
@@ -372,10 +398,12 @@ body {
       display: inline;
       width: 25%;
     }
-  }
-  h2 {margin-bottom: 2em;}
-  p {
-    margin-bottom: 1em;
+    @media screen and (max-width: 480px) {
+      li {
+        display: inline;
+        width: 50%;
+      }
+    }
   }
 }
 
@@ -576,10 +604,6 @@ body {
       text-align: center;
       color: #595959;
       color: rgba(89, 89, 89, 0.8);
-      -webkit-transition: all 0.3s ease-in-out;
-      -moz-transition: all 0.3s ease-in-out;
-      -ms-transition: all 0.3s ease-in-out;
-      -o-transition: all 0.3s ease-in-out;
       transition: all 0.3s ease-in-out;
     }
     &.icon-circle .fa {
@@ -594,26 +618,16 @@ body {
     .fa {
       &:hover, &:active {
         color: #595959;
-        -webkit-box-shadow: 1px 1px 3px #333;
-        -moz-box-shadow: 1px 1px 3px #333;
         box-shadow: 1px 1px 3px #333;
       }
     }
     &.icon-zoom .fa {
       &:hover, &:active {
-        -webkit-transform: scale(1.1);
-        -moz-transform: scale(1.1);
-        -ms-transform: scale(1.1);
-        -o-transform: scale(1.1);
         transform: scale(1.1);
       }
     }
     &.icon-rotate .fa {
       &:hover, &:active {
-        -webkit-transform: scale(1.1) rotate(360deg);
-        -moz-transform: scale(1.1) rotate(360deg);
-        -ms-transform: scale(1.1) rotate(360deg);
-        -o-transform: scale(1.1) rotate(360deg);
         transform: scale(1.1) rotate(360deg);
       }
     }
@@ -630,10 +644,6 @@ body {
         text-align: center;
         color: #595959;
         color: rgba(89, 89, 89, 0.8);
-        -webkit-transition: all 0.3s ease-in-out;
-        -moz-transition: all 0.3s ease-in-out;
-        -ms-transition: all 0.3s ease-in-out;
-        -o-transition: all 0.3s ease-in-out;
         transition: all 0.3s ease-in-out;
       }
     }
